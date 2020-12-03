@@ -3,14 +3,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create the Schema
-const UserSchema = new Schema({}, {
+const TagSchema = new Schema({}, {
 	timestamp: true
 });
 
 // Create the model
-const User = mongoose.model('User', UserSchema);
+const Tag = mongoose.model('Tag', TagSchema);
 
 // Make it available all over the app
 module.exports = {
-	User
+	Tag
 };

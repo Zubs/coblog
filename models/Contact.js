@@ -3,24 +3,29 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create the Schema
-const PostSchema = new Schema({
-	title: {
-		type: String,
+const ContactSchema = new Schema({
+	from: {
+		type: email,
 		required: true
 	},
 	body: {
 		type: String,
 		required: true
+	},
+	subject: {
+		type: String
+	},
+	name: {
+		type: String
 	}
-	// More code to be added soon
 }, {
 	timestamps: true
 });
 
 // Create the model
-const Post = mongoose.model('Post', PostSchema);
+const Contact = mongoose.model('Contact', ContactSchema);
 
 // Make it available all over the app
 module.exports = {
-	Post
+	Contact
 };
