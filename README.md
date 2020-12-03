@@ -1,7 +1,7 @@
 # CoBlog
 
 ## What Is CoBlog?
-We just want to be able to collaborate when writing our tech blogs
+A platform for collaborating on writeups.
 
 ## Tech Stack
 *  HTML
