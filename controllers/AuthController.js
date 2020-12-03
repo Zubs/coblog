@@ -7,7 +7,7 @@ const User = require('../models/User');
 
 // Display login page
 const login = (req, res) => {
-	res.render('auth.login');
+	res.render('auth/login');
 };
 
 // Handle login
@@ -17,7 +17,7 @@ const postLogin = (req, res) => {
 
 // Render register view
 const register = (req, res) => {
-	res.render('auth.register');
+	res.render('auth/register');
 };
 
 // Store user entered details. Might send mail too 👉👈
@@ -27,7 +27,7 @@ const postRegister = (req, res) => {
 
 // Display page to enter email to get new password
 const forgotPassword = (req, res) => {
-	res.render('auth.forgot-password');
+	res.render('auth/forgot-password');
 };
 
 // Get user detail and send mail

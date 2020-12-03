@@ -33,7 +33,7 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 
 // Respond to routes
-app.use('/', posts);
+app.use('/', post);
 app.use('/', pages);
 app.use('/', user);
 

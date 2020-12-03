@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 // Create the Schema
 const ContactSchema = new Schema({
 	from: {
-		type: email,
+		type: String,
 		required: true
 	},
 	body: {

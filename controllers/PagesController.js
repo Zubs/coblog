@@ -7,12 +7,12 @@ const Contact = require('../models/Contact');
 
 // Display about page
 const about = (req, res) => {
-	res.render('pages.about');
+	res.render('pages/about');
 };
 
 // Display contact page
 const contact = (req, res) => {
-	res.render('pages.user-posts');
+	res.render('pages/user-posts');
 };
 
 // Store contact here
