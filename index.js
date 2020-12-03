@@ -1,5 +1,6 @@
 // Import packages
 const express = require('express');
+const dotenv = require('dotenv');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
@@ -8,19 +9,45 @@ const pages = require('./routes/pages');
 const post = require('./routes/post');
 const user = require('./routes/user');
 
+
+
+// Config
+dotenv.config({path: './config/config.env'})
+
 // Initiate the app
 const app = express();
 
+
+// Port
+const PORT = process.env.PORT || 3000;
+ 
+// Mode (Who says we can't have some fun 😇) 
+ switch(process.env.NODE_ENV){
+ case 'development':
+	 MODE = '🤨 '
+	 break;
+ case 'production':
+	  MODE =  ' 😋'
+	  break
+}
+
+
 // Link to mongoDB atlas
-const dbURI = 'mongodb+srv://young:ethene20@cluster0.hgbre.mongodb.net/coblog?retryWrites=true&w=majority';
+
+
+// Variable to store get db uri from environment
+const dbURI = process.env.MONGO_URI;
+
+
 mongoose.connect(dbURI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 })
-.then((result) => {
-	console.log('Connected to DB and listening for requests on PORT 3000');
-	app.listen(3000);
-})
+.then(() => {
+console.log(`Connected to DB and listening for requests on port ${PORT}.
+Note ${MODE} all this is in ${process.env.NODE_ENV} mode.`);
+	app.listen(PORT);
+})  
 .catch((err) => console.log(err));
 
 // Register view engine

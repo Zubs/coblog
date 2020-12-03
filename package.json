@@ -4,23 +4,27 @@
   "description": "Not just another blog site...",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index",
-    "start": "node index"
+    "dev": "cross-env NODE_ENV=development nodemon index",
+    "start": "cross-env NODE_ENV=production node index"
   },
   "keywords": [
     "Blog",
     "Team"
   ],
   "authors": {
-    "Zubs" :"zubairidrisaweda@gmail.com",
-    "regeditmsc" :"efusanyaae@gmail.com"
+    "Zubs": "zubairidrisaweda@gmail.com",
+    "Regedit-msc": "efusanyaae@gmail.com"
   },
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.14",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
