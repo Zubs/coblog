@@ -1,0 +1,19 @@
+{
+  "name": "coblog",
+  "version": "1.0.0",
+  "description": "Not just another blog site...",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index"
+  },
+  "keywords": [
+    "Blog",
+    "Team"
+  ],
+  "author": [
+    "Zubs <zubairidrisaweda@gmail.com>",
+    "regeditmsc <your_email_here>"
+  ],
+  "license": "MIT"
+}
