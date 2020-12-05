@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const {isEmail} = require('validator');
 const Schema = mongoose.Schema;
 
-
 // Create the Schema
 const UserSchema = new Schema({
 	email:{

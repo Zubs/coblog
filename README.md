@@ -10,7 +10,8 @@ A platform for collaborating on writeups.
 
 ## Contributors
 *  [Zubair Idris Aweda](https://zubs.github.io)
-*  [ Efusanya Ayomide](https://ayfolio.netlify.com)
+*  [Efusanya Ayomide](https://ayfolio.netlify.com)
+*  [Akinwande Boluwarin](https://github.com/bolubee)
 
 ## :heart: Found this project useful?
 If you found this project useful or you like what you see, then please consider giving it a :star: on Github and sharing it with your friends via social media.
