@@ -6,8 +6,14 @@ const Schema = mongoose.Schema;
 const TagSchema = new Schema({
 	category: {
 		type: String,
-		required: false,
-	}
+		required: true, // could be false
+	},
+	postid: {
+		type: mongoose.Schema.Types.ObjectId, 
+		ref: "Post",
+		required: true, // could be made false esp. if the category is non-existent abi ??
+	  },
+
 }, {
 	timestamp: true
 });
