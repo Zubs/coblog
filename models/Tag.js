@@ -3,7 +3,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create the Schema
-const TagSchema = new Schema({}, {
+const TagSchema = new Schema({
+	category: {
+		type: String,
+		required: false,
+	}
+}, {
 	timestamp: true
 });
 
