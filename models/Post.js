@@ -11,7 +11,8 @@ const PostSchema = new Schema({
 	body: {
 		type: String,
 		required: true
-	}
+	},
+	
 	// More code to be added soon
 }, {
 	timestamps: true
