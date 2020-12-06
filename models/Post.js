@@ -18,9 +18,9 @@ const PostSchema = new Schema({
 		required:true,
 	},
 	tag:{
-		type: String,
+		type:Array,
 		required:false,
-		unique:true,
+		unique:false,
 	}
 	// More code to be added soon
 }, {
