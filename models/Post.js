@@ -6,13 +6,22 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
 	title: {
 		type: String,
-		required: true
+		required: [true, 'You have to give your write-up a title.']
 	},
 	body: {
 		type: String,
-		required: true
+		required: [true, 'Your write-up must have some content.']
 	},
-	
+	uid:{
+		type: mongoose.SchemaTypes.ObjectId,
+		ref:"User",
+		required:true,
+	},
+	tag:{
+		type:Array,
+		required:false,
+		unique:false,
+	}
 	// More code to be added soon
 }, {
 	timestamps: true

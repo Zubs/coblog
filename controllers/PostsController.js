@@ -4,7 +4,7 @@
 
 // Import the model
 const Post = require('../models/Post');
-const Tag = require('../models/Tag'); // This helps filter by category
+ // This helps filter by category
 
 // Display landing page with all posts
 const index = (req, res) => {
