@@ -3,6 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const expressSession = require("express-session");
 
 // Import routes
 const pages = require('./routes/pages');
@@ -32,7 +33,7 @@ const PORT = process.env.PORT || 3000;
 }
 
 
-// Link to mongoDB atlas
+
 
 
 // Variable to store get db uri from environment
@@ -58,6 +59,24 @@ app.use(express.static('public'));
 
 // Using morgan to log instead
 app.use(morgan('dev'));
+
+// Initiate Session
+app.use(
+	expressSession({
+	  secret: "keyboard cat",
+	})
+  );
+  
+
+  // Logged in for navbar routes protection :)
+  global.loggedIn = null;
+  
+  app.use("*", (req, res, next) => {
+	loggedIn = req.session.userId;
+	next();
+  });
+
+
 
 // Respond to routes
 app.use('/', post);
