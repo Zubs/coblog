@@ -46,7 +46,7 @@ const handleErrors = (err) => {
 
 //TODO: Login
 const login = (req, res) => {
-	res.render('auth/login');
+	res.send('auth/login');
 };
 
 
