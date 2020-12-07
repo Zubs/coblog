@@ -12,15 +12,15 @@ const PostSchema = new Schema({
 		type: String,
 		required: [true, 'Your write-up must have some content.']
 	},
-	uid:{
+	uid: {
 		type: mongoose.SchemaTypes.ObjectId,
-		ref:"User",
-		required:true,
+		ref: "User",
+		required: true,
 	},
-	tag:{
-		type:Array,
-		required:false,
-		unique:false,
+	tag: {
+		type: Array,
+		required: false,
+		unique: false,
 	}
 	// More code to be added soon
 }, {
