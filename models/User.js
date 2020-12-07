@@ -55,7 +55,7 @@ UserSchema.pre('save', async function(next) {
 		// Compare the passwords
 	  const auth = await bcrypt.compare(password, user.password);
 
-	  // If everything is successful retrun the user 
+	  // If everything is successful return the user 
 	  if (auth) {
 		return user;
 	  }
